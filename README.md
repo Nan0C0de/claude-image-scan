@@ -30,7 +30,7 @@ That's it. Trivy is automatically pulled and run as a container — no separate 
 Add the marketplace and install:
 
 ```
-/plugin marketplace add igorkoricanac/claude-image-scan
+/plugin marketplace add igor-koricanac/claude-image-scan
 /plugin install image-scan@igorkoricanac-claude-image-scan
 ```
 
