@@ -1,4 +1,4 @@
-# image-scan
+# Docker Image Scan
 
 A [Claude Code](https://claude.com/claude-code) plugin that builds, scans, and analyzes container images for security vulnerabilities using [Trivy](https://github.com/aquasecurity/trivy) — with **no local Trivy installation required**.
 
@@ -6,7 +6,7 @@ Supports both **Docker** and **Podman** as the container runtime.
 
 ## What it does
 
-`image-scan` automates the full container security workflow:
+`Docker Image Scan` automates the full container security workflow:
 
 1. **Detect** the available container runtime (Docker or Podman)
 2. **Build** the image from a Dockerfile
@@ -31,7 +31,7 @@ Add the marketplace and install:
 
 ```
 /plugin marketplace add igor-koricanac/claude-image-scan
-/plugin install image-scan@igorkoricanac-claude-image-scan
+/plugin install image-scan@image-scan-marketplace
 ```
 
 ## Usage
@@ -87,6 +87,19 @@ The plugin is a Claude Code skill defined in `skills/image-scan/SKILL.md`. When 
 5. Removes both the built image and the `aquasec/trivy:latest` image
 
 No data leaves your machine — everything runs locally via your container runtime.
+
+## Privacy
+
+This plugin runs entirely on your local machine. It does not collect, transmit, store, or share any user data.
+
+- No telemetry
+- No analytics
+- No external API calls (other than your container runtime pulling the `aquasec/trivy:latest` image from its configured registry, which the user controls)
+- No network traffic initiated by the plugin itself
+- Scan results are written to a local temporary directory that is deleted after the scan completes
+- Built images and the Trivy container image are removed from your local machine after the scan
+
+Because everything is local, there is no data collection to disclose.
 
 ## License
 
