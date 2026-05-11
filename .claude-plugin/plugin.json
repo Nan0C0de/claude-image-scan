@@ -5,7 +5,7 @@
   "author": {
     "name": "Igor Koricanac"
   },
-  "repository": "https://github.com/igor-koricanac/claude-image-scan",
+  "repository": "https://github.com/Nan0C0de/claude-image-scan",
   "license": "MIT",
   "keywords": ["docker", "podman", "security", "trivy", "vulnerability", "scanning", "container", "devops", "image-scan"]
 }
