@@ -8,10 +8,10 @@
   },
   "plugins": [
     {
-      "name": "image-scan",
+      "name": "docker-image-scan",
       "source": "./",
       "description": "Build, scan, and analyze container images for security vulnerabilities using Trivy via Docker or Podman",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

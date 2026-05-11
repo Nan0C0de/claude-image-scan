@@ -1,5 +1,5 @@
 ---
-name: image-scan
+name: scan
 description: Build a container image from a Dockerfile, scan it for security vulnerabilities using Trivy (via Docker or Podman), and clean up all images afterward.
 ---
 
@@ -12,9 +12,9 @@ Scan container images for vulnerabilities using Trivy. This skill handles the fu
 The user provides a **path to a Dockerfile**. The input is passed via `$ARGUMENTS`.
 
 Examples:
-- `/image-scan:image-scan ./Dockerfile`
-- `/image-scan:image-scan ./docker/Dockerfile`
-- `/image-scan:image-scan /absolute/path/to/Dockerfile`
+- `/docker-image-scan:scan ./Dockerfile`
+- `/docker-image-scan:scan ./docker/Dockerfile`
+- `/docker-image-scan:scan /absolute/path/to/Dockerfile`
 
 ## Workflow
 

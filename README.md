@@ -27,11 +27,11 @@ That's it. Trivy is automatically pulled and run as a container — no separate 
 
 ## Installation
 
-Add the marketplace and install:
+Add the official community marketplace and install:
 
 ```
-/plugin marketplace add igor-koricanac/claude-image-scan
-/plugin install image-scan@image-scan-marketplace
+/plugin marketplace add anthropics/claude-plugins-community
+/plugin install docker-image-scan@claude-community
 ```
 
 ## Usage
@@ -39,13 +39,13 @@ Add the marketplace and install:
 ### Scan a Dockerfile
 
 ```
-/image-scan:image-scan ./Dockerfile
+/docker-image-scan:scan ./Dockerfile
 ```
 
 ### Scan a Dockerfile in a subdirectory
 
 ```
-/image-scan:image-scan ./docker/Dockerfile
+/docker-image-scan:scan ./docker/Dockerfile
 ```
 
 ## Example output
@@ -78,7 +78,7 @@ Cleanup complete: removed scanned image and Trivy image.
 
 ## How it works
 
-The plugin is a Claude Code skill defined in `skills/image-scan/SKILL.md`. When invoked:
+The plugin is a Claude Code skill defined in `skills/scan/SKILL.md`. When invoked:
 
 1. Detects whether Docker or Podman is installed (prefers Docker if both are available)
 2. Builds your container image from the provided Dockerfile
